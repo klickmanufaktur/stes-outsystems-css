@@ -1,0 +1,17 @@
+[data-switch]
+  &:empty:before
+    height: var(--space-m)
+    width: var(--space-xl)
+    background: var(--color-border)
+    border-color: var(--color-border)
+  &:empty:hover:before
+    background: var(--color-neutral-6)
+    border-color: var(--color-neutral-6)
+  &:empty:after
+    height: var(--spacing-4-5)
+    width: var(--spacing-4-5)
+  &:checked:before, &:checked:hover:before
+    background: var(--color-success)
+    border-color: var(--color-success)
+  &:checked:after
+    transform: translateX(var(--spacing-5)) translateZ(0)

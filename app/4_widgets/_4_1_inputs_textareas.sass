@@ -1,0 +1,37 @@
+.form-control[data-input]
+  border-color: var(--color-border)
+  background: var(--color-neutral-0)
+  padding: var(--spacing-4)
+  font-size: var(--font-size-base)
+  color: var(--color-neutral-11)
+  height: auto
+
+  &::placeholder
+    color: var(--color-neutral-6)
+
+.form-control[data-textarea]
+  border-color: var(--color-border)
+  background: var(--color-neutral-0)
+  padding: var(--spacing-4)
+  font-size: var(--font-size-base)
+  color: var(--color-neutral-11)
+
+// VALIDATION
+.form span.validation-message, span.validation-message
+  font-size: var(--font-size-m)
+  font-weight: 600
+  bottom: calc(-1 * var(--spacing-10))
+
+// INPUT WITH ICON
+.input-with-icon .input-with-icon-content-icon
+  width: var(--spacing-12)
+.input-with-icon .input-with-icon-content-icon:not(:empty) + .input-with-icon-input input
+  padding-left: var(--spacing-11)
+.input-with-icon.input-with-icon-right .input-with-icon-content-icon:not(:empty) + .input-with-icon-input input
+  padding-right: var(--spacing-11)
+
+// SEARCH
+.osui-search .form-control[data-input]
+  padding-left: var(--spacing-12)
+.osui-search__input input[data-input]
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjUgNi41QzExLjUgNC43MTg3NSAxMC41MzEyIDMuMDkzNzUgOSAyLjE4NzVDNy40Mzc1IDEuMjgxMjUgNS41MzEyNSAxLjI4MTI1IDQgMi4xODc1QzIuNDM3NSAzLjA5Mzc1IDEuNSA0LjcxODc1IDEuNSA2LjVDMS41IDguMzEyNSAyLjQzNzUgOS45Mzc1IDQgMTAuODQzOEM1LjUzMTI1IDExLjc1IDcuNDM3NSAxMS43NSA5IDEwLjg0MzhDMTAuNTMxMiA5LjkzNzUgMTEuNSA4LjMxMjUgMTEuNSA2LjVaTTEwLjUzMTIgMTEuNjI1QzkuNDA2MjUgMTIuNSA4IDEzIDYuNSAxM0MyLjkwNjI1IDEzIDAgMTAuMDkzOCAwIDYuNUMwIDIuOTM3NSAyLjkwNjI1IDAgNi41IDBDMTAuMDYyNSAwIDEzIDIuOTM3NSAxMyA2LjVDMTMgOC4wMzEyNSAxMi40Njg4IDkuNDM3NSAxMS41OTM4IDEwLjU2MjVMMTUuNzgxMiAxNC43MTg4QzE2LjA2MjUgMTUuMDMxMiAxNi4wNjI1IDE1LjUgMTUuNzgxMiAxNS43ODEyQzE1LjQ2ODggMTYuMDkzOCAxNSAxNi4wOTM4IDE0LjcxODggMTUuNzgxMkwxMC41MzEyIDExLjYyNVoiIGZpbGw9IiM0QjU1NjMiLz4KPC9zdmc+Cg==)

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+.form-control[data-input] {
+  border-color: var(--color-border);
+  background: var(--color-neutral-0);
+  padding: var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-11);
+  height: auto;
+}
+.form-control[data-input]::placeholder {
+  color: var(--color-neutral-6);
+}
+
+.form-control[data-textarea] {
+  border-color: var(--color-border);
+  background: var(--color-neutral-0);
+  padding: var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-11);
+}
+
+.form span.validation-message, span.validation-message {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  bottom: calc(-1 * var(--spacing-10));
+}
+
+.input-with-icon .input-with-icon-content-icon {
+  width: var(--spacing-12);
+}
+
+.input-with-icon .input-with-icon-content-icon:not(:empty) + .input-with-icon-input input {
+  padding-left: var(--spacing-11);
+}
+
+.input-with-icon.input-with-icon-right .input-with-icon-content-icon:not(:empty) + .input-with-icon-input input {
+  padding-right: var(--spacing-11);
+}
+
+.osui-search .form-control[data-input] {
+  padding-left: var(--spacing-12);
+}
+
+.osui-search__input input[data-input] {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjUgNi41QzExLjUgNC43MTg3NSAxMC41MzEyIDMuMDkzNzUgOSAyLjE4NzVDNy40Mzc1IDEuMjgxMjUgNS41MzEyNSAxLjI4MTI1IDQgMi4xODc1QzIuNDM3NSAzLjA5Mzc1IDEuNSA0LjcxODc1IDEuNSA2LjVDMS41IDguMzEyNSAyLjQzNzUgOS45Mzc1IDQgMTAuODQzOEM1LjUzMTI1IDExLjc1IDcuNDM3NSAxMS43NSA5IDEwLjg0MzhDMTAuNTMxMiA5LjkzNzUgMTEuNSA4LjMxMjUgMTEuNSA2LjVaTTEwLjUzMTIgMTEuNjI1QzkuNDA2MjUgMTIuNSA4IDEzIDYuNSAxM0MyLjkwNjI1IDEzIDAgMTAuMDkzOCAwIDYuNUMwIDIuOTM3NSAyLjkwNjI1IDAgNi41IDBDMTAuMDYyNSAwIDEzIDIuOTM3NSAxMyA2LjVDMTMgOC4wMzEyNSAxMi40Njg4IDkuNDM3NSAxMS41OTM4IDEwLjU2MjVMMTUuNzgxMiAxNC43MTg4QzE2LjA2MjUgMTUuMDMxMiAxNi4wNjI1IDE1LjUgMTUuNzgxMiAxNS43ODEyQzE1LjQ2ODggMTYuMDkzOCAxNSAxNi4wOTM4IDE0LjcxODggMTUuNzgxMkwxMC41MzEyIDExLjYyNVoiIGZpbGw9IiM0QjU1NjMiLz4KPC9zdmc+Cg==);
+}
+
+[data-switch]:empty:before {
+  height: var(--space-m);
+  width: var(--space-xl);
+  background: var(--color-border);
+  border-color: var(--color-border);
+}
+[data-switch]:empty:hover:before {
+  background: var(--color-neutral-6);
+  border-color: var(--color-neutral-6);
+}
+[data-switch]:empty:after {
+  height: var(--spacing-4-5);
+  width: var(--spacing-4-5);
+}
+[data-switch]:checked:before, [data-switch]:checked:hover:before {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+[data-switch]:checked:after {
+  transform: translateX(var(--spacing-5)) translateZ(0);
+}
+
+.dropdown-container > div.dropdown-display, .dropdown-container > select.dropdown-display {
+  border-color: var(--color-border);
+  background: var(--color-neutral-0);
+  padding: var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-11);
+  height: auto;
+}
+
+.dropdown-container:after {
+  top: var(--spacing-3-5);
+  right: var(--spacing-4);
+  border: none;
+  content: "";
+  font-family: "FontAwesome";
+  font-size: var(--font-size-h5);
+  height: auto;
+  width: auto;
+  transform: none;
+  color: var(--color-neutral-7);
+}
+
+.btn {
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  padding: var(--spacing-4-5) var(--spacing-5-5);
+  height: auto;
+  line-height: var(--font-size-h5);
+  border-color: rgba(var(--color-primary-rgb), 0.6);
+  gap: var(--spacing-3);
+  white-space: nowrap;
+}
+.btn.btn-small {
+  font-size: var(--font-size-m);
+  padding: var(--spacing-2-5) var(--spacing-3-5);
+}
+.btn.btn-primary {
+  background: var(--color-primary);
+}
+.btn.btn-secondary {
+  background: var(--color-neutral-0);
+  color: var(--color-primary);
+  border-color: rgba(var(--color-primary-rgb), 0.6);
+}
+
+[data-upload] {
+  border-color: var(--color-border);
+  height: auto;
+  padding: var(--spacing-4);
+}
+[data-upload] [data-expression] {
+  color: var(--color-neutral-11);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+[data-upload] [data-icon] {
+  font-size: var(--font-size-base);
+  margin-left: 0;
+  margin-right: var(--spacing-3);
+}
+
+.button-group .button-group-item {
+  font-weight: 700;
+  font-size: var(--font-size-h5);
+  padding: var(--spacing-4-5) var(--spacing-5-5);
+  height: auto;
+}
+.radio-button:checked:before {
+  border-width: 7px;
+}
+
+.radio-button:checked:hover:before {
+  filter: none;
+}
+
+/*# sourceMappingURL=widgets.css.map */
