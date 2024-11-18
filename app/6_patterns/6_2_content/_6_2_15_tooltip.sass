@@ -1,0 +1,20 @@
+div.osui-tooltip__balloon-wrapper__balloon
+  background-color: var(--color-primary)
+
+.osui-tooltip__balloon-wrapper.right .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: transparent var(--color-primary) transparent transparent
+
+.osui-tooltip__balloon-wrapper.center .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: transparent transparent var(--color-primary) transparent
+
+.osui-tooltip__balloon-wrapper.left .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: transparent transparent transparent var(--color-primary)
+
+.osui-tooltip__balloon-wrapper.top .osui-tooltip__balloon-wrapper__balloon:before, .osui-tooltip__balloon-wrapper.top-left .osui-tooltip__balloon-wrapper__balloon:before, .osui-tooltip__balloon-wrapper.top-right .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: var(--color-primary) transparent transparent transparent
+
+.osui-tooltip__balloon-wrapper.bottom .osui-tooltip__balloon-wrapper__balloon:before, .osui-tooltip__balloon-wrapper.bottom-left .osui-tooltip__balloon-wrapper__balloon:before, .osui-tooltip__balloon-wrapper.bottom-right .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: transparent transparent var(--color-primary) transparent
+
+.osui-tooltip__balloon-wrapper:not(.left):not(.right):not(.center):not(.top):not(.top-left):not(.top-right):not(.bottom):not(.bottom-left):not(.bottom-right) .osui-tooltip__balloon-wrapper__balloon:before
+  border-color: transparent var(--color-primary) transparent transparent

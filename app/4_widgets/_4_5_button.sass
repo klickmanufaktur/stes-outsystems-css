@@ -1,21 +1,23 @@
 .btn
-  font-size: var(--font-size-h5)
+  font-size: var(--font-size-base)
   font-weight: 700
   padding: var(--spacing-4-5) var(--spacing-5-5)
-  height: auto
+  height: var(--spacing-14)
   line-height: var(--font-size-h5)
   border-color: rgba(var(--color-primary-rgb), 0.6)
   gap: var(--spacing-3)
   white-space: nowrap
 
   &.btn-small
+    background: var(--color-background-body)
     font-size: var(--font-size-m)
     padding: var(--spacing-2-5) var(--spacing-3-5)
+    height: var(--spacing-11)
 
   &.btn-primary
     background: var(--color-primary)
 
   &.btn-secondary
-    background: var(--color-neutral-0)
+    background: var(--color-background-body)
     color: var(--color-primary)
     border-color: rgba(var(--color-primary-rgb), 0.6)

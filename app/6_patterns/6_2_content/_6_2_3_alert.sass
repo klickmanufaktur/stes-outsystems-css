@@ -1,0 +1,11 @@
+div.alert
+  padding: var(--spacing-6)
+
+body.dark-mode
+  div.alert
+    &.alert-info,
+    &.alert-success,
+    &.alert-error
+      color: var(--color-neutral-11)
+    &.alert-warning
+      color: var(--color-neutral-0)

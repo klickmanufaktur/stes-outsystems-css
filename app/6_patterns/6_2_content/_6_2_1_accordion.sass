@@ -1,0 +1,18 @@
+div.osui-accordion-item
+  --accordion-active-border-size: 0 !important
+  background: var(--color-background-body)
+
+  .osui-accordion-item__title
+    font-weight: var(--font-semi-bold)
+    &:hover
+      color: var(--color-primary)
+
+  &.osui-accordion-item--is-open
+    .osui-accordion-item__title
+      font-weight: var(--font-bold) !important
+      color: var(--color-primary)
+    .osui-accordion-item__icon
+      color: var(--color-primary)
+
+  .osui-accordion-item__icon
+    color: var(--color-neutral-7)

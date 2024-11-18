@@ -1,0 +1,26 @@
+div.osui-overflow-menu__balloon
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25)
+  box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.15)
+  background: var(--color-background-body)
+  body.dark-mode &
+    border-color: var(--color-neutral-3)
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20), 0px 0px 8px 0px rgba(0, 0, 0, 0.20)
+
+  nav
+    a[data-link]
+      text-decoration: none
+      color: var(--color-neutral-11)
+      padding: var(--spacing-2) var(--spacing-12) var(--spacing-2) var(--spacing-4)
+      i
+        &:before
+          font-size: var(--font-size-s)
+      span
+        margin-left: var(--spacing-2) !important
+      &:hover
+        background: var(--color-neutral-3)
+        color: var(--color-primary)
+      &.active
+        background: var(--color-primary)
+        color: var(--color-neutral-0)
+      &.margin-bottom-s
+        margin-bottom: 0

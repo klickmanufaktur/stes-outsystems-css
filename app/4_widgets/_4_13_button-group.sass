@@ -1,7 +1,15 @@
-.button-group
-  .button-group-item
+[data-button-group]
+  [data-button-group-item]
     font-weight: 700
-    font-size: var(--font-size-h5)
-    padding: var(--spacing-4-5) var(--spacing-5-5)
-    height: auto
-    &.button-group-selected-item
+    font-size: var(--font-size-base)
+    padding: var(--spacing-4) var(--spacing-5-5)
+    height: var(--spacing-14)
+
+body.dark-mode
+  [data-button-group]
+    [data-button-group-item]
+      background: var(--color-background-body)
+      &.button-group-selected-item
+        background: var(--color-primary)
+      &:disabled
+        background: var(--color-background-body)

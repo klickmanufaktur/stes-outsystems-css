@@ -1,0 +1,26 @@
+section.osui-tabs
+
+  &.osui-tabs--is-horizontal
+
+    header.osui-tabs__header
+      overflow: visible
+      button.osui-tabs__header-item
+        font-weight: var(--font-bold)
+        color: var(--color-neutral-7)
+        padding: var(--spacing-2) var(--spacing-4)
+        border-bottom: var(--spacing-0-5) solid transparent
+        position: relative
+        z-index: 1
+        &:hover
+          border-bottom-color: var(--color-neutral-6)
+          color: var(--color-neutral-11)
+        &.osui-tabs--is-active
+          color: var(--color-primary)
+
+      div.osui-tabs__header__indicator
+        transform: translateX(var(--tabs-indicator-transform)) translateY(-2px) translateZ(0)
+        position: relative
+
+    section.osui-tabs__content
+      transform: translateY(-3px)
+      border-top: var(--spacing-0-5) solid var(--color-neutral-4)

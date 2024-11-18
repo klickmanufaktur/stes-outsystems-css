@@ -1,0 +1,66 @@
+div.osui-range-slider
+  --range-slider-thickness: var(--spacing-1-5) !important
+
+  div.noUi-horizontal
+    .noUi-tooltip
+      bottom: 85%
+      color: var(--color-primary)
+      font-weight: var(--font-semi-bold)
+    .noUi-pips.noUi-pips-horizontal
+      color: var(--color-neutral-7)
+      padding-top: var(--spacing-3-5)
+      height: 0
+      top: 0
+      .noUi-marker-horizontal
+        height: var(--spacing-1-5)
+        background: var(--color-neutral-4)
+      .noUi-value-horizontal
+        color: var(--color-neutral-7)
+        font-size: var(--font-size-m)
+    div.noUi-handle
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%236B7280' d='M32 32C18.7 32 8 42.7 8 56L8 456c0 13.3 10.7 24 24 24s24-10.7 24-24L56 56c0-13.3-10.7-24-24-24zm128 0c-13.3 0-24 10.7-24 24l0 400c0 13.3 10.7 24 24 24s24-10.7 24-24l0-400c0-13.3-10.7-24-24-24z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: var(--spacing-1-5)
+      background-color: var(--color-background-body)
+      &:before, &:after
+        display: none
+      &:hover, &:active
+        background-color: var(--color-primary)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M32 32C18.7 32 8 42.7 8 56L8 456c0 13.3 10.7 24 24 24s24-10.7 24-24L56 56c0-13.3-10.7-24-24-24zm128 0c-13.3 0-24 10.7-24 24l0 400c0 13.3 10.7 24 24 24s24-10.7 24-24l0-400c0-13.3-10.7-24-24-24z'/%3E%3C/svg%3E")
+        cursor: ew-resize
+        body.dark-mode &
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M32 32C18.7 32 8 42.7 8 56L8 456c0 13.3 10.7 24 24 24s24-10.7 24-24L56 56c0-13.3-10.7-24-24-24zm128 0c-13.3 0-24 10.7-24 24l0 400c0 13.3 10.7 24 24 24s24-10.7 24-24l0-400c0-13.3-10.7-24-24-24z'/%3E%3C/svg%3E")
+
+
+  div.noUi-vertical
+    .noUi-tooltip
+      right: 115%
+      color: var(--color-primary)
+      font-weight: var(--font-semi-bold)
+    .noUi-pips.noUi-pips-vertical
+      color: var(--color-neutral-7)
+      //padding-left: var(--spacing-3-5)
+      //height: 0
+      left: 0
+      .noUi-marker-vertical
+        width: var(--spacing-1-5)
+        background: var(--color-neutral-4)
+      .noUi-value-vertical
+        color: var(--color-neutral-7)
+        padding-left: var(--spacing-2-5)
+        font-size: var(--font-size-m)
+    div.noUi-handle
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%236B7280' d='M448 192c0-13.3-10.7-24-24-24L24 168c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24zm0 128c0-13.3-10.7-24-24-24L24 296c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: var(--spacing-3-5)
+      background-color: var(--color-background-body)
+      &:before, &:after
+        display: none
+      &:hover, &:active
+        background-color: var(--color-primary)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M448 192c0-13.3-10.7-24-24-24L24 168c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24zm0 128c0-13.3-10.7-24-24-24L24 296c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24z'/%3E%3C/svg%3E")
+        cursor: ns-resize
+        body.dark-mode &
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M448 192c0-13.3-10.7-24-24-24L24 168c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24zm0 128c0-13.3-10.7-24-24-24L24 296c-13.3 0-24 10.7-24 24s10.7 24 24 24l400 0c13.3 0 24-10.7 24-24z'/%3E%3C/svg%3E")

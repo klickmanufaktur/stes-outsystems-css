@@ -1,10 +1,13 @@
 .dropdown-container > div.dropdown-display, .dropdown-container > select.dropdown-display
   border-color: var(--color-border)
-  background: var(--color-neutral-0)
+  background: var(--color-background-body)
   padding: var(--spacing-4)
   font-size: var(--font-size-base)
   color: var(--color-neutral-11)
-  height: auto
+  height: var(--spacing-14)
+
+  &:focus, &:active
+    box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
 
 .dropdown-container:after
   top: var(--spacing-3-5)
@@ -17,3 +20,200 @@
   width: auto
   transform: none
   color: var(--color-neutral-7)
+
+
+/**
+  * DROPDOWN SERVERSIDE
+  */
+
+div.osui-dropdown-serverside
+  div.osui-dropdown-serverside__selected-values-wrapper
+    border-color: var(--color-border)
+    background: var(--color-background-body)
+    padding: var(--spacing-4)
+    font-size: var(--font-size-base)
+    color: var(--color-neutral-11)
+    height: var(--spacing-14)
+
+div.osui-dropdown-serverside__balloon-search-wrapper
+  background: var(--color-background-body)
+
+div.osui-dropdown-serverside__balloon-wrapper
+
+  div.osui-dropdown-serverside-item
+    background: var(--color-background-body)
+    color: var(--color-neutral-11)
+    height: var(--spacing-12) !important
+    padding-left: var(--spacing-4)
+    padding-right: var(--spacing-4)
+    background-position: bottom 50% right var(--spacing-4)
+    background-size: var(--spacing-3)
+    background-repeat: no-repeat
+    transition: color, background-color 180ms linear
+    &:hover
+      background: var(--color-neutral-3)
+      color: var(--color-primary)
+    &.osui-dropdown-serverside-item--is-selected
+      background: var(--color-primary)
+      color: var(--color-background-body)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+      background-position: bottom 50% right var(--spacing-4)
+      background-size: var(--spacing-3-5)
+      background-repeat: no-repeat
+      body.dark-mode &
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+
+  .osui-dropdown-serverside__balloon-search
+    .form-control[data-input]
+      height: var(--spacing-12)
+      font-size: var(--font-size-base)
+      color: var(--color-neutral-11)
+      &:active, &:focus
+        box-shadow: none
+
+
+/**
+  * DROPDOWN SEARCH
+  */
+
+div.osui-dropdown-search
+  div.vscomp-wrapper
+    div.vscomp-toggle-button
+      border-color: var(--color-border)
+      background: var(--color-background-body)
+      padding: var(--spacing-4)
+      font-size: var(--font-size-base)
+      color: var(--color-neutral-11)
+      height: var(--spacing-14)
+
+div.pop-comp-wrapper
+  font-family: "Source Sans 3", sans-serif
+  div.vscomp-dropbox
+    border: 1px solid var(--color-border)
+    background-color: var(--color-background-body)
+  div.vscomp-search-container
+    height: var(--spacing-12)
+    input.vscomp-search-input
+      height: var(--spacing-12)
+      font-size: var(--font-size-base)
+      color: var(--color-neutral-11)
+  div.vscomp-option
+    height: var(--spacing-12) !important
+    padding-left: var(--spacing-4)
+    padding-right: var(--spacing-4)
+    background: var(--color-background-body)
+    span.vscomp-option-text
+      font-size: var(--font-size-base)
+      padding: var(--spacing-2) 0
+    &:hover
+      background: var(--color-neutral-3)
+      span.vscomp-option-text
+        color: var(--color-primary)
+    &.selected
+      background: var(--color-primary)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+      background-position: bottom 50% right var(--spacing-4)
+      background-size: var(--spacing-3-5)
+      background-repeat: no-repeat
+      body.dark-mode &
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+      span.vscomp-option-text
+        color: var(--color-background-body)
+
+
+/**
+ * DROPDOWN TAGS
+ */
+
+div.osui-dropdown-tags
+  div.vscomp-wrapper
+
+    div.vscomp-toggle-button
+      border-color: var(--color-border)
+      background: var(--color-background-body)
+      padding-left: var(--spacing-4) !important
+      padding-right: var(--spacing-4)
+      padding-top: var(--spacing-2)
+      font-size: var(--font-size-base)
+      color: var(--color-neutral-11)
+      height: var(--spacing-14)
+      div.vscomp-value
+        gap: var(--spacing-3)
+        span.vscomp-value-tag
+          display: flex
+          justify-content: space-between
+          align-items: center
+          gap: var(--spacing-0-5)
+          width: auto
+          height: var(--spacing-7)
+          padding: var(--spacing-2) var(--spacing-2)
+          margin: 0
+          border-radius: 0
+          background: var(--color-primary)
+          color: var(--color-background-body)
+          font-size: var(--font-size-s)
+        span.vscomp-value-tag-clear-button
+          display: block
+          position: relative
+          background-color: transparent
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23ffffff' d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          right: 0
+          width: var(--spacing-3)
+          height: var(--spacing-3)
+          border-radius: 0
+          i
+            display: none
+          body.dark-mode &
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/%3E%3C/svg%3E")
+
+    &.has-value
+      div.vscomp-toggle-button
+        padding-left: var(--spacing-3) !important
+        padding-right: var(--spacing-4)
+        padding-top: var(--spacing-4-5)
+
+div.pop-comp-wrapper
+  span.vscomp-toggle-all-button
+    span.checkbox-icon
+      height: var(--spacing-5)
+      width: var(--spacing-5)
+      border: 1px solid var(--color-border)
+      background-color: var(--color-background-body)
+      &.checked
+        background-color: var(--color-primary)
+        border-color: var(--color-primary)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 75%
+        body.dark-mode &
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+      &:after, &:before
+        display: none
+
+  div.vscomp-options-list
+    height: auto !important
+
+  div.vscomp-options
+    div.vscomp-option
+      height: var(--spacing-12) !important
+      span.checkbox-icon
+        height: var(--spacing-5)
+        width: var(--spacing-5)
+        background-color: var(--color-background-body)
+      &.selected
+        span.checkbox-icon
+          background-color: var(--color-background-body)
+          border-color: var(--color-background-body)
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23014E66' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-position: center
+          background-size: 75%
+          &:after
+            display: none
+            //border-color: var(--color-primary)
+          body.dark-mode &
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E")

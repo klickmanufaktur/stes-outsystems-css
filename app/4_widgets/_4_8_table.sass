@@ -1,0 +1,28 @@
+table.table
+  thead
+    tr.table-header
+      th
+        background: var(--color-neutral-3)
+        font-size: var(--font-size-m)
+        body.dark-mode &
+          background: var(--color-neutral-1)
+        div.sortable-icon
+          margin-left: var(--spacing-1-5)
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M529 377c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-55 55L440 56c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 342.1-55-55c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l96 96c9.4 9.4 24.6 9.4 33.9 0l96-96zM177 39c-9.4-9.4-24.6-9.4-33.9 0L47 135c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l55-55L136 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-342.1 55 55c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L177 39z'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          height: var(--spacing-3-5)
+          width: var(--spacing-3-5)
+          background-position: center center
+          background-size: contain
+          transform: translateY(var(--spacing-0-5))
+          body.dark-mode &
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M529 377c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-55 55L440 56c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 342.1-55-55c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l96 96c9.4 9.4 24.6 9.4 33.9 0l96-96zM177 39c-9.4-9.4-24.6-9.4-33.9 0L47 135c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l55-55L136 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-342.1 55 55c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L177 39z'/%3E%3C/svg%3E")
+          &:before, &:after
+            border: none
+  tbody
+    tr.table-row
+      td
+        background: var(--color-background-body)
+      &:hover
+        td
+          background: var(--color-neutral-3)

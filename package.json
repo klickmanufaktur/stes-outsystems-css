@@ -1,0 +1,21 @@
+{
+  "name": "stes-outsystems-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/klickmanufaktur/stes-outsystems-css.git",
+  "author": "klickmanufaktur <patrick@klickmanufaktur.de>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.49",
+    "sass": "^1.81.0",
+    "yargs": "^17.7.2"
+  }
+}

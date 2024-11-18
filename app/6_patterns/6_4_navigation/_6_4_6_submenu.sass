@@ -1,0 +1,80 @@
+[data-block="OSUI_Navigation.Submenu"]
+  div.osui-submenu
+
+    &.osui-submenu--is-dropdown
+
+      div.osui-submenu__header
+        padding: 0
+        div.osui-submenu__header__item
+          font-weight: var(--font-semi-bold)
+          color: var(--color-neutral-11)
+          a
+            text-decoration: none
+            color: var(--color-neutral-11)
+        &:hover
+          //border-color: transparent
+
+        div.osui-submenu__header__icon
+          margin-left: var(--spacing-1-5)
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%231F2937' d='M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          height: var(--spacing-3)
+          width: var(--spacing-3)
+          transform: none
+          body.dark-mode &
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--%3E%3Cpath style='fill:%23FFFFFF' d='M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z'/%3E%3C/svg%3E")
+          &:before
+            display: none
+
+      &.osui-submenu--is-open
+        div.osui-submenu__header
+          div.osui-submenu__header__item
+            color: var(--color-primary)
+        div.osui-submenu__header__icon
+          top: 0
+          transform: rotate(180deg) !important
+
+      div.osui-submenu__items
+        min-width: var(--spacing-40)
+        padding: 0
+        border-color: rgba(var(--color-primary-rgb), 0.25)
+        box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.15)
+        background-color: var(--color-background-body)
+        body.dark-mode &
+          border-color: var(--color-neutral-3)
+          box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20), 0px 0px 8px 0px rgba(0, 0, 0, 0.20)
+        a[data-link]
+          text-decoration: none
+          color: var(--color-neutral-11)
+          padding: var(--spacing-2) var(--spacing-12) var(--spacing-2) var(--spacing-4)
+          i
+            &:before
+              font-size: var(--font-size-s)
+          span
+            margin-left: var(--spacing-2) !important
+          &:hover
+            background: var(--color-neutral-3)
+            color: var(--color-primary)
+          &.active
+            background: var(--color-primary)
+            color: var(--color-neutral-0)
+          &.margin-bottom-s
+            margin-bottom: 0
+        ul
+          li
+            > span
+              font-size: var(--font-size-s)
+              font-weight: var(--font-bold)
+              color: var(--color-neutral-7)
+              text-transform: uppercase
+
+
+div.app-menu-links
+  gap: var(--spacing-4)
+  align-items: center
+  [data-block="OSUI_Navigation.Submenu"]
+    div.osui-submenu
+      div.osui-submenu__header
+        padding: var(--spacing-3) var(--spacing-2-5)

@@ -1,0 +1,20 @@
+[data-block="OSUI_Navigation.TimelineItem"]
+
+  div.timeline-icon-container
+    width: var(--spacing-6)
+    height: var(--spacing-6)
+
+  div.timeline-content
+    > div:not(.timeline-content-inner)
+      font-weight: var(--font-semi-bold)
+    div.timeline-content-inner
+      font-size: var(--font-size-m)
+      color: var(--color-neutral-7)
+
+  div.timeline-icon-line
+    width: var(--spacing-0-5)
+    background-color: var(--color-neutral-4)
+
+  &:is(:last-child)
+    div.timeline-icon-line
+      background-color: transparent

@@ -1,0 +1,18 @@
+div.osui-section-index
+  &:before
+    width: 2px
+  .osui-section-index-item
+    color: var(--color-neutral-7)
+    &:hover
+      color: var(--color-neutral-11)
+      &:before
+        background-color: var(--color-neutral-11)
+        bottom: 0
+        content: ""
+        left: 0
+        position: absolute
+        top: 0
+        width: 2px
+    &.osui-section-index-item--is-active
+      color: var(--color-primary)
+      font-weight: var(--font-bold)

@@ -1,5 +1,10 @@
-.radio-button:checked:before
-  border-width: 7px
+.radio-button
+  &:before
+    background: var(--color-background-body)
 
-.radio-button:checked:hover:before
-  filter: none
+  &:checked:before
+    border-width: 7px
+    background: var(--color-background-body)
+
+  &:checked:hover:before
+    filter: none

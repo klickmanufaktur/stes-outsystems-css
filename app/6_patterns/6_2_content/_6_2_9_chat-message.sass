@@ -1,0 +1,23 @@
+[data-block="OSUI_Content.ChatMessage"]
+  div.chat
+    margin-bottom: var(--spacing-6)
+
+    div.chat-message
+      font-size: var(--font-size-m)
+      padding: var(--spacing-3-5) var(--spacing-4)
+
+    div.chat-message-status
+      color: var(--color-neutral-7)
+      font-size: var(--font-size-s)
+      i.icon.fa-check
+        color: var(--color-success) !important
+
+    &.left
+      div.chat-message
+        background: var(--color-neutral-2)
+        border: 1px solid var(--color-neutral-3)
+
+    &.right
+      div.chat-message
+        background: var(--color-primary)
+        border: 1px solid var(--color-primary)

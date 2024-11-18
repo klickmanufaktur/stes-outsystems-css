@@ -1,20 +1,26 @@
 .form-control[data-input]
   border-color: var(--color-border)
-  background: var(--color-neutral-0)
+  background: var(--color-background-body)
   padding: var(--spacing-4)
   font-size: var(--font-size-base)
   color: var(--color-neutral-11)
-  height: auto
+  height: var(--spacing-14)
+
+  &:focus, &:active
+    box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
 
   &::placeholder
     color: var(--color-neutral-6)
 
 .form-control[data-textarea]
   border-color: var(--color-border)
-  background: var(--color-neutral-0)
+  background: var(--color-background-body)
   padding: var(--spacing-4)
   font-size: var(--font-size-base)
   color: var(--color-neutral-11)
+
+  &:focus, &:active
+    box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
 
 // VALIDATION
 .form span.validation-message, span.validation-message
