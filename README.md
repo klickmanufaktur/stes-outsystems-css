@@ -1,4 +1,8 @@
-# Usage
+# Stadt Esslingen – Outsystems-Design-System
 
-Run `yarn install`  
-Run `gulp`  
+## Installation
+Run `yarn install` to install packages  
+
+## Compiling
+Run `gulp` to generate styles.css and styles.min.css  
+Run `gulp watch` to generate css on-the-fly
