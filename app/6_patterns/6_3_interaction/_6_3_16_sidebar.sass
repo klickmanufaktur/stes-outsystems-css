@@ -1,14 +1,20 @@
-.osui-sidebar
-  box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.15)
-  &.osui-sidebar--is-left
-    border-right: 1px solid rgba(var(--color-primary-rgb), 0.25)
-  &.osui-sidebar--is-right
-    border-left: 1px solid rgba(var(--color-primary-rgb), 0.25)
+[data-block="OSUI_Interaction.Sidebar"]
 
-  .osui-sidebar__header
-    font-size: var(--font-size-h4)
-    font-weight: 700
-    padding: var(--spacing-8)
-    padding-bottom: 0
-  .osui-sidebar__content
-    padding: var(--spacing-8)
+  .osui-sidebar
+    box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.15)
+    background-color: var(--color-background-body)
+    body.dark-mode &
+      box-shadow: 0px 3px 20px 0px rgba(3, 7, 18, 0.75)
+      border-color: var(--color-neutral-3)
+    &.osui-sidebar--is-left
+      border-right: 1px solid rgba(var(--color-primary-rgb), 0.25)
+    &.osui-sidebar--is-right
+      border-left: 1px solid rgba(var(--color-primary-rgb), 0.25)
+
+    .osui-sidebar__header
+      font-size: var(--font-size-h4)
+      font-weight: 700
+      padding: var(--spacing-8)
+      padding-bottom: 0
+    .osui-sidebar__content
+      padding: var(--spacing-8)
