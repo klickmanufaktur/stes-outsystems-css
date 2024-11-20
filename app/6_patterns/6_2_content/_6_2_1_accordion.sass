@@ -1,18 +1,37 @@
-div.osui-accordion-item
-  --accordion-active-border-size: 0 !important
-  background: var(--color-background-body)
+[data-block="OSUI_Content.AccordionItem"]
 
-  .osui-accordion-item__title
-    font-weight: var(--font-semi-bold)
-    &:hover
-      color: var(--color-primary)
+  div.osui-accordion-item
+    --accordion-active-border-size: 0 !important
+    background: var(--color-background-body)
+    border: none
+    border-bottom: 1px solid var(--color-neutral-4) !important
 
-  &.osui-accordion-item--is-open
     .osui-accordion-item__title
-      font-weight: var(--font-bold) !important
-      color: var(--color-primary)
-    .osui-accordion-item__icon
-      color: var(--color-primary)
+      font-weight: var(--font-semi-bold)
+      font-size: var(--font-size-h5)
+      padding: var(--spacing-6) 0
+      transition: all 150ms linear
+      body.dark-mode &
+        color: var(--color-neutral-11)
+      &:hover
+        color: var(--color-primary)
 
-  .osui-accordion-item__icon
-    color: var(--color-neutral-7)
+    &.osui-accordion-item--is-open
+      .osui-accordion-item__title
+        font-weight: var(--font-bold) !important
+        color: var(--color-primary) !important
+        padding-bottom: 0
+      .osui-accordion-item__icon
+        color: var(--color-primary)
+
+    .osui-accordion-item__content
+      padding: 0
+      body.dark-mode &
+        color: var(--color-neutral-11)
+      p
+        margin-block-start: var(--spacing-6)
+        margin-block-end: var(--spacing-6)
+
+    .osui-accordion-item__icon
+      color: var(--color-neutral-7)
+      font-size: var(--font-size-h5)

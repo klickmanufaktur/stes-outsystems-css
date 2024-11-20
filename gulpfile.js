@@ -10,7 +10,7 @@ const rename = require("gulp-rename"); // Zum Umbenennen von Dateien
 const paths = {
     styles: {
         main: "app/styles.sass", // Nur styles.sass wird kompiliert
-        watch: "app/**/*.sass",  // Alle SASS-Dateien im app-Ordner und Unterordnern
+        watch: "app/**/*.{sass,scss}",  // Alle SASS-Dateien im app-Ordner und Unterordnern
         dest: "dist/",
     },
 };

@@ -8,3 +8,23 @@
 
   &:checked:hover:before
     filter: none
+
+  &:checked + label
+    color: var(--color-primary)
+
+[data-radio-group]
+  [data-radio-button]
+    align-items: flex-start
+    gap: var(--spacing-1-5)
+    input:checked + label p:first-child
+      color: var(--color-primary)
+    label
+      margin-top: var(--spacing-1)
+      p
+        margin-block-start: 0
+        margin-block-end: var(--spacing-3)
+        &:not(:first-child)
+          font-weight: 400
+          font-size: var(--font-size-m)
+          line-height: 150%
+          color: var(--color-neutral-9)

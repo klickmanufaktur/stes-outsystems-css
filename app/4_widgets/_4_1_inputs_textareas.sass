@@ -22,12 +22,6 @@
   &:focus, &:active
     box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
 
-// VALIDATION
-.form span.validation-message, span.validation-message
-  font-size: var(--font-size-m)
-  font-weight: 600
-  bottom: calc(-1 * var(--spacing-10))
-
 // INPUT WITH ICON
 .input-with-icon .input-with-icon-content-icon
   width: var(--spacing-12)
@@ -41,3 +35,8 @@
   padding-left: var(--spacing-12)
 .osui-search__input input[data-input]
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjUgNi41QzExLjUgNC43MTg3NSAxMC41MzEyIDMuMDkzNzUgOSAyLjE4NzVDNy40Mzc1IDEuMjgxMjUgNS41MzEyNSAxLjI4MTI1IDQgMi4xODc1QzIuNDM3NSAzLjA5Mzc1IDEuNSA0LjcxODc1IDEuNSA2LjVDMS41IDguMzEyNSAyLjQzNzUgOS45Mzc1IDQgMTAuODQzOEM1LjUzMTI1IDExLjc1IDcuNDM3NSAxMS43NSA5IDEwLjg0MzhDMTAuNTMxMiA5LjkzNzUgMTEuNSA4LjMxMjUgMTEuNSA2LjVaTTEwLjUzMTIgMTEuNjI1QzkuNDA2MjUgMTIuNSA4IDEzIDYuNSAxM0MyLjkwNjI1IDEzIDAgMTAuMDkzOCAwIDYuNUMwIDIuOTM3NSAyLjkwNjI1IDAgNi41IDBDMTAuMDYyNSAwIDEzIDIuOTM3NSAxMyA2LjVDMTMgOC4wMzEyNSAxMi40Njg4IDkuNDM3NSAxMS41OTM4IDEwLjU2MjVMMTUuNzgxMiAxNC43MTg4QzE2LjA2MjUgMTUuMDMxMiAxNi4wNjI1IDE1LjUgMTUuNzgxMiAxNS43ODEyQzE1LjQ2ODggMTYuMDkzOCAxNSAxNi4wOTM4IDE0LjcxODggMTUuNzgxMkwxMC41MzEyIDExLjYyNVoiIGZpbGw9IiM0QjU1NjMiLz4KPC9zdmc+Cg==)
+
+// Content counter
+div.content-counter
+  body.dark-mode &
+    color: var(--color-neutral-7)

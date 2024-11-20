@@ -70,7 +70,6 @@
               color: var(--color-neutral-7)
               text-transform: uppercase
 
-
 div.app-menu-links
   gap: var(--spacing-4)
   align-items: center
@@ -78,3 +77,7 @@ div.app-menu-links
     div.osui-submenu
       div.osui-submenu__header
         padding: var(--spacing-3) var(--spacing-2-5)
+      &.active
+        div.osui-submenu__header__item
+          a
+            color: var(--color-primary)

@@ -1,0 +1,28 @@
+[data-block="ESUI_Content.InfoBox"]
+  display: block
+  div.info-box
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    gap: var(--spacing-2-5)
+    padding: var(--spacing-4-5)
+    //margin-block-start: var(--spacing-2)
+    //margin-block-end: var(--spacing-6)
+    margin-block-start: 0
+    margin-block-end: 0
+    i
+      display: block
+      position: relative
+      top: var(--spacing-0-5)
+      font-size: var(--font-size-h4)
+    div.content
+      margin: 0
+      width: auto
+    &.info
+      background-color: var(--color-info-light)
+      border: 1px solid var(--color-info-border)
+      color: var(--color-info-text)
+    &.error
+      background-color: var(--color-error-light)
+      border: 1px solid var(--color-error-border)
+      color: var(--color-error-text)

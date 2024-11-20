@@ -1,0 +1,26 @@
+[data-block="ESUI_Content.MediaFileViewer"]
+  div.media-file-viewer
+    background: var(--color-background-body)
+    div.content
+      margin-top: 0
+      //margin-top: calc(var(--spacing-2) * -1)
+      img
+        border-color: var(--color-border)
+      div.zoom
+        i
+          position: absolute
+          bottom: var(--spacing-4)
+          right: var(--spacing-4)
+          font-size: var(--font-size-h4)
+          color: var(--color-neutral-0)
+          text-shadow: 0px 0px 6px rgba(0, 0, 0, .75)
+          body.dark-mode &
+            color: var(--color-neutral-11)
+
+
+[data-block="ESUI_Interaction.Upload_Datei"]
+  div.media-file-viewer
+    div.content
+      margin-top: calc(var(--spacing-2) * -1)
+      img
+        border-top: none

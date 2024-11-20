@@ -9,18 +9,21 @@
   &:focus, &:active
     box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
 
+  &:disabled
+    background-color: var(--color-neutral-3)
+    color: var(--color-neutral-9)
+
 .dropdown-container:after
-  top: var(--spacing-3-5)
+  top: var(--spacing-4)
   right: var(--spacing-4)
   border: none
   content: "\f107"
   font-family: "FontAwesome"
-  font-size: var(--font-size-h5)
+  font-size: var(--font-size-m)
   height: auto
   width: auto
   transform: none
   color: var(--color-neutral-7)
-
 
 /**
   * DROPDOWN SERVERSIDE
@@ -85,6 +88,10 @@ div.osui-dropdown-search
       font-size: var(--font-size-base)
       color: var(--color-neutral-11)
       height: var(--spacing-14)
+      div.vscomp-value
+        font-size: var(--font-size-base)
+      &:after
+        font-size: var(--font-size-m)
 
 div.pop-comp-wrapper
   font-family: "Source Sans 3", sans-serif

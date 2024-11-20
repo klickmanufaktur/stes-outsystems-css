@@ -26,3 +26,13 @@ table.table
       &:hover
         td
           background: var(--color-neutral-3)
+
+div.table
+  margin-block-end: var(--spacing-6)
+  color: var(--color-neutral-11)
+  div.table-row
+    padding: var(--spacing-2-5) var(--spacing-4)
+    &:not(:last-child)
+      border-bottom: 1px solid var(--color-neutral-4)
+    div.label
+      font-weight: var(--font-semi-bold)
