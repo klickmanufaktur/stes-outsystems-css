@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 :root {
   --font-size-h1: 32px;
   --font-size-h2: 28px;
@@ -778,6 +777,7 @@ body.dark-mode div.pop-comp-wrapper div.vscomp-options div.vscomp-option.selecte
 [data-upload] div.label-container {
   align-items: center;
   gap: var(--spacing-2-5);
+  height: var(--spacing-5);
 }
 [data-upload] div.label-container div.filename {
   padding-left: 0;
@@ -837,6 +837,9 @@ body.dark-mode [data-button-group] [data-button-group-item]:disabled {
   font-size: var(--font-size-m);
   line-height: 150%;
   color: var(--color-neutral-9);
+}
+[data-radio-group] span.validation-message {
+  margin-top: 0 !important;
 }
 
 div.feedback-message {
@@ -1015,6 +1018,9 @@ body.dark-mode [data-popup-backdrop] [data-popup] {
 [data-list] .list-item:hover:not(.list-item-no-hover):not(.list-item-selected) {
   background-color: var(--color-neutral-3) !important;
 }
+[data-list] div.card {
+  margin-block-end: var(--spacing-8);
+}
 
 .form-control[data-input],
 .form-control[data-textarea],
@@ -1074,6 +1080,12 @@ body.dark-mode [data-block="ESUI_Content.MediaFileViewer"] div.media-file-viewer
   border-top: none;
 }
 
+[data-block="OSUI_Content.AccordionItem"] {
+  display: block !important;
+}
+[data-block="OSUI_Content.AccordionItem"]:is(:first-child) {
+  border-top: 1px solid var(--color-neutral-4) !important;
+}
 [data-block="OSUI_Content.AccordionItem"] div.osui-accordion-item {
   --accordion-active-border-size: 0 !important;
   background: var(--color-background-body);
