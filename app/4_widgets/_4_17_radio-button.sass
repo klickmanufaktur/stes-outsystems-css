@@ -1,9 +1,11 @@
 .radio-button
+  height: var(--spacing-6)
+  width: var(--spacing-6)
   &:before
     background: var(--color-background-body)
 
   &:checked:before
-    border-width: 7px
+    border-width: calc(var(--spacing-1-5) + 1px)
     background: var(--color-background-body)
 
   &:checked:hover:before
@@ -28,5 +30,7 @@
           font-size: var(--font-size-m)
           line-height: 150%
           color: var(--color-neutral-9)
+        &:is(:last-child)
+          margin-block-end: 0
   span.validation-message
     margin-top: 0 !important

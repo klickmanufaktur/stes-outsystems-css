@@ -1,7 +1,22 @@
+html
+  font-size: 18px !important
+  &:has(body.desktop)
+    font-size: 18px !important
+  &:has(body.tablet)
+    font-size: 16px !important
+  &:has(body.phone)
+    font-size: 14px !important
+
 body
   background: #E1EBF1
   &.dark-mode
     background: #111827
+  &.desktop
+    --layout-gap: var(--spacing-10)
+  &.tablet
+    --layout-gap: var(--spacing-8)
+  &.tablet
+    --layout-gap: var(--spacing-6)
 
 div.content
   margin-top: var(--spacing-12)

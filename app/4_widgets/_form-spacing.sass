@@ -1,11 +1,25 @@
-.form-control[data-input],
-.form-control[data-textarea],
+.dropdown,
+.search-input,
+input[data-input],
+textarea[data-textarea],
+[data-switch],
 [data-radio-group],
-select,
+[data-block="ESUI_Interaction.RadioListGroup"],
+[data-block="OSUI_Content.Accordion"],
 div.input-element
-  margin-block-end: var(--spacing-6)
+  margin-bottom: calc(var(--layout-gap) * .75) !important
+
+
+section.card > div[id$="-Inhalt"]
+  > [data-container] > button
+    margin-bottom: calc(var(--layout-gap) * .75)
+
+.phone .layout:not(.layout-native) [class*=ThemeGrid_Width]:not(.no-responsive)
+  margin: 0
+
+/*section.card > div[id$="-Inhalt"] > div
+  > [data-container] > [data-container]
+    margin-top: var(--spacing-6)*/
 
 [data-block="ESUI_Content.InfoBox"]
-  margin-block-start: var(--spacing-2)
-  &:not(:last-child)
-    margin-block-end: var(--spacing-6)
+  margin-bottom: calc(var(--layout-gap) * .75)
