@@ -3,6 +3,9 @@ div.wizard-wrapper
     cursor: default !important
 
     div.wizard-item-icon-wrapper
+      &:before
+        width: calc(100% - var(--spacing-6))
+        right: calc(50% + var(--spacing-3))
       div.wizard-item-icon
         width: var(--spacing-6)
         height: var(--spacing-6)
@@ -24,7 +27,7 @@ div.wizard-wrapper
     &.active
       div.wizard-item-icon-wrapper
         div.wizard-item-icon
-          border-width: 3px
+          border-width: var(--spacing-3px)
           background-color: transparent
           &:before
             content: ""
@@ -48,7 +51,7 @@ div.wizard-wrapper
         &:before
           background-color: var(--color-border)
         div.wizard-item-icon
-          border-width: 3px
+          border-width: var(--spacing-3px)
           border-color: var(--color-border)
           background-color: transparent
 
@@ -56,12 +59,12 @@ div.wizard-wrapper
 div.wizard-wrapper.flex-direction-row
   div.wizard-item-icon-wrapper
     &:before
-      height: 3px
+      height: var(--spacing-3px)
 
 div.wizard-wrapper.flex-direction-column
   div.wizard-item-icon-wrapper
     &:before
-      width: 3px
+      width: var(--spacing-3px)
   div.wizard-wrapper-item.label-bottom
     &.past
       div.wizard-item-icon-wrapper

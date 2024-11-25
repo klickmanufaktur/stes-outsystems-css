@@ -1,9 +1,21 @@
 footer.footer
   font-size: var(--font-size-m)
   height: auto !important
-  padding-top: var(--spacing-5)
-  padding-bottom: var(--spacing-5)
+  padding: var(--spacing-5) var(--layout-gap)
   position: relative
+  align-items: center
+  background: var(--color-primary)
+  bottom: 0
+  color: rgba(255, 255, 255, 0.8)
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  text-decoration: none
+  white-space: nowrap
+  width: 100%
+
+  .footer-copyright
+    margin-right: var(--layout-gap)
 
   body.dark-mode &
     background-color: var(--color-neutral-0)
@@ -16,3 +28,11 @@ footer.footer
     display: flex
     justify-content: flex-end
     gap: var(--spacing-8)
+    a
+      color: var(--color-neutral-0)
+      font-weight: var(--font-regular)
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+      body.dark-mode &
+        color: var(--color-neutral-11)

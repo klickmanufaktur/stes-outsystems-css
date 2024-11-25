@@ -1,4 +1,5 @@
 [data-block="ESUI_Content.MediaFileViewer"]
+  display: block
   div.media-file-viewer
     background: var(--color-background-body)
     div.content
@@ -17,6 +18,11 @@
           body.dark-mode &
             color: var(--color-neutral-11)
 
+  body.phone &
+    margin-bottom: calc(var(--layout-gap) * .75)
+
+[data-container]:has([data-block="ESUI_Content.MediaFileViewer"]):is(:last-child) > [data-block="ESUI_Content.MediaFileViewer"]
+  margin-bottom: calc(var(--layout-gap) * .25)
 
 [data-block="ESUI_Interaction.Upload_Datei"]
   div.media-file-viewer

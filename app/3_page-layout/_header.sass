@@ -3,6 +3,25 @@ header.header
   height: auto
   padding-top: var(--spacing-3)
   padding-bottom: var(--spacing-3)
+  align-items: center
+  gap: var(--layout-gap)
+  display: flex
+  justify-content: space-between
+  width: 100%
+  z-index: var(--layer-global-navigation)
+
+  &.header-sticky
+    left: 0
+    position: sticky
+    top: 0
+    right: 0
+
+  .logo
+    height: var(--logo-height)
+    width: auto
+
+  .header-toggles a:not(:first-child)
+    margin-left: var(--spacing-2-5)
 
   body.dark-mode &
     background: var(--color-neutral-0)
