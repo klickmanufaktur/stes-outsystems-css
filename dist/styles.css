@@ -251,7 +251,7 @@
   --spacing-80: 17.7778rem; /* 320px */
   --spacing-96: 21.3333rem; /* 384px */
   --layout-gap: var(--spacing-10);
-  --logo-height: var(---spacing-14);
+  --logo-height: var(--spacing-16);
   --main-width: 1000px;
 }
 
@@ -381,17 +381,17 @@ blockquote {
 }
 
 html {
-  font-size: 18px !important;
+  font-size: 17px !important;
   height: 100%;
 }
 html:has(body.desktop) {
-  font-size: 18px !important;
+  font-size: 17px !important;
 }
 html:has(body.tablet) {
   font-size: 16px !important;
 }
 html:has(body.phone) {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 body {
@@ -407,7 +407,7 @@ body.desktop {
 body.tablet {
   --layout-gap: var(--spacing-8);
 }
-body.tablet {
+body.phone {
   --layout-gap: var(--spacing-6);
 }
 
@@ -450,8 +450,7 @@ body.dark-mode [data-block="OSUI_Content.Section"] .section-title {
 header.header {
   box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.12);
   height: auto;
-  padding-top: var(--spacing-3);
-  padding-bottom: var(--spacing-3);
+  padding: var(--spacing-3) var(--layout-gap);
   align-items: center;
   gap: var(--layout-gap);
   display: flex;
@@ -466,8 +465,14 @@ header.header.header-sticky {
   right: 0;
 }
 header.header .logo {
-  height: var(--logo-height);
+  height: var(--spacing-16);
   width: auto;
+}
+body.tablet header.header .logo {
+  height: var(--spacing-14);
+}
+body.phone header.header .logo {
+  height: var(--spacing-12);
 }
 header.header .header-toggles a:not(:first-child) {
   margin-left: var(--spacing-2-5);
@@ -499,10 +504,8 @@ body.phone section.card {
 }
 
 main.main {
-  margin-block-start: var(--spacing-12);
-  margin-block-end: var(--spacing-12);
   background-color: transparent;
-  margin: var(--spacing-5) auto;
+  margin: var(--layout-gap) auto;
   max-width: var(--main-width);
   width: calc(100% - var(--layout-gap) * 2);
 }
