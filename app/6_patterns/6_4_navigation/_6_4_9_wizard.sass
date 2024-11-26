@@ -1,6 +1,12 @@
 div.wizard-wrapper
+
+  [data-block="OSUI_Navigation.WizardItem"]
+    min-width: var(--spacing-12)
+
   div.wizard-wrapper-item.label-bottom
     cursor: default !important
+    //min-width: var(--spacing-20)
+    //overflow-x: scroll
 
     div.wizard-item-icon-wrapper
       &:before
@@ -9,6 +15,17 @@ div.wizard-wrapper
       div.wizard-item-icon
         width: var(--spacing-6)
         height: var(--spacing-6)
+
+    div.wizard-item-label
+      span
+        display: block
+        line-height: 120%
+        width: 100%
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        body.phone &
+          text-overflow: ellipsis
 
     &.past
       div.wizard-item-icon-wrapper

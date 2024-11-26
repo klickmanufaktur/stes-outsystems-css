@@ -1,0 +1,144 @@
+@charset "UTF-8";
+html {
+  font-size: 17px !important;
+  height: 100%;
+}
+html:has(body.desktop) {
+  font-size: 17px !important;
+}
+html:has(body.tablet) {
+  font-size: 16px !important;
+}
+html:has(body.phone) {
+  font-size: 15px !important;
+}
+
+body {
+  background: #E1EBF1;
+  height: 100%;
+}
+body.dark-mode {
+  background: #111827;
+}
+body.desktop {
+  --layout-gap: var(--spacing-10);
+}
+body.tablet {
+  --layout-gap: var(--spacing-8);
+}
+body.phone {
+  --layout-gap: var(--spacing-6);
+}
+
+div.content {
+  margin-top: var(--spacing-12);
+}
+div.content div.ThemeGrid_Container {
+  background-color: var(--color-neutral-0);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25);
+  box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.12);
+}
+body.dark-mode div.content div.ThemeGrid_Container {
+  background-color: var(--color-neutral-2);
+  border-color: var(--color-neutral-3);
+  box-shadow: 0px 3px 20px 0px rgba(3, 7, 18, 0.75);
+}
+
+.layout-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main.main {
+  background-color: transparent;
+  margin: var(--layout-gap) auto;
+  max-width: var(--main-width);
+  width: calc(100% - var(--layout-gap) * 2);
+}
+
+header.header {
+  box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.12);
+  height: auto;
+  padding: var(--spacing-3) var(--layout-gap);
+  align-items: center;
+  gap: var(--layout-gap);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: var(--layer-global-navigation);
+}
+header.header.header-sticky {
+  left: 0;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+header.header .logo {
+  height: var(--spacing-16);
+  width: auto;
+}
+body.tablet header.header .logo {
+  height: var(--spacing-14);
+}
+body.phone header.header .logo {
+  height: var(--spacing-12);
+}
+header.header .header-toggles a:not(:first-child) {
+  margin-left: var(--spacing-2-5);
+}
+body.dark-mode header.header {
+  background: var(--color-neutral-0);
+  box-shadow: 0px 3px 20px 0px rgba(3, 7, 18, 0.5);
+}
+
+footer.footer {
+  font-size: var(--font-size-m);
+  height: auto !important;
+  padding: var(--spacing-5) var(--layout-gap);
+  position: relative;
+  align-items: center;
+  background: var(--color-primary);
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%;
+}
+footer.footer .footer-copyright {
+  margin-right: var(--layout-gap);
+}
+body.dark-mode footer.footer {
+  background-color: var(--color-neutral-0);
+}
+footer.footer a {
+  text-decoration: none;
+  font-weight: var(--font-regular);
+  margin: 0 !important;
+}
+footer.footer div.footer-navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-8);
+}
+footer.footer div.footer-navigation a {
+  color: var(--color-neutral-0);
+  font-weight: var(--font-regular);
+  text-decoration: none;
+}
+footer.footer div.footer-navigation a:hover {
+  text-decoration: underline;
+}
+body.dark-mode footer.footer div.footer-navigation a {
+  color: var(--color-neutral-11);
+}
+
+/**
+ * * Bürgerapplikationen
+ * */
+.buerger .ThemeGrid_Container {
+  max-width: 1280px;
+}

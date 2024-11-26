@@ -1,0 +1,38 @@
+html
+  font-size: 17px !important
+  height: 100%
+  &:has(body.desktop)
+    font-size: 17px !important
+  &:has(body.tablet)
+    font-size: 16px !important
+  &:has(body.phone)
+    font-size: 15px !important
+
+body
+  background: #E1EBF1
+  height: 100%
+  &.dark-mode
+    background: #111827
+  &.desktop
+    --layout-gap: var(--spacing-10)
+  &.tablet
+    --layout-gap: var(--spacing-8)
+  &.phone
+    --layout-gap: var(--spacing-6)
+
+div.content
+  margin-top: var(--spacing-12)
+
+  div.ThemeGrid_Container
+    background-color: var(--color-neutral-0)
+    border: 1px solid rgba(var(--color-primary-rgb), 0.25)
+    box-shadow: 0px 3px 20px 0px rgba(1, 62, 82, 0.12)
+    body.dark-mode &
+      background-color: var(--color-neutral-2)
+      border-color: var(--color-neutral-3)
+      box-shadow: 0px 3px 20px 0px rgba(3, 7, 18, 0.75)
+
+.layout-wrapper
+  height: 100%
+  display: grid
+  grid-template-rows: auto 1fr auto

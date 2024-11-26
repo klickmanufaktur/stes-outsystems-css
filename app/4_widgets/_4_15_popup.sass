@@ -5,15 +5,44 @@
   [data-popup]
     background: var(--color-background-body)
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(0, 0, 0, 0.25)
-    padding: var(--spacing-10)
+    padding: var(--layout-gap)
+    max-width: 800px
     body.dark-mode &
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5), 0px 0px 16px 0px rgba(0, 0, 0, 0.5)
     div.title-bar
       a
         i
           font-size: var(--font-size-h3) !important
+    div.popup-titel
+      margin-bottom: var(--layout-gap)
+      .close-button
+        margin: 0
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          background: inherit
+          text-decoration: none
+          height: var(--spacing-8)
+          width: var(--spacing-8)
+          i
+            font-size: var(--font-size-h3) !important
+            color: var(--color-primary)
+            &:hover
+              color: var(--color-neutral-11)
+
     div.content
-      margin-top: 0
-      margin-block-start: var(--spacing-6)
-      margin-block-end: var(--spacing-6)
+      margin-top: var(--spacing-6)
+      margin-bottom: var(--spacing-6)
       color: var(--color-neutral-11)
+    div.buttons
+      margin-top: var(--layout-gap)
+  div.popup-dialog
+    overflow: hidden
+  [data-block="ESUI_Content.HTML"]
+    display: block
+
+.popup-layout .popup-content
+  overflow: scroll
+  max-height: 60vh
+  scrollbar-width: thin

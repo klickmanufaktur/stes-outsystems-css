@@ -3,6 +3,14 @@
   width: var(--spacing-6)
   &:before
     background: var(--color-background-body)
+    height: var(--spacing-6)
+    width: var(--spacing-6)
+    body.has-accessible-features &
+      background: var(--color-background-body) !important
+  &:after
+    background: var(--color-background-body)
+    body.has-accessible-features &
+      background: var(--color-background-body) !important
 
   &:checked:before
     border-width: calc(var(--spacing-1-5) + 1px)
@@ -14,6 +22,11 @@
   &:checked + label
     color: var(--color-primary)
 
+  &:focus:before
+    body.has-accessible-features &
+      border-width: calc(var(--spacing-1-5) + 1px)
+      border-color: var(--color-primary)
+
 [data-radio-group]
   [data-radio-button]
     align-items: flex-start
@@ -22,17 +35,23 @@
       padding-bottom: var(--spacing-3-5)
     input:checked + label p:first-child
       color: var(--color-primary)
+    input[type="radio"]
+      height: var(--spacing-6)
+      width: var(--spacing-6)
+      &:focus
+        &:after
+          background: var(--color-background-body)
     label
       margin-top: var(--spacing-1)
       p
-        margin-block-start: 0
-        margin-block-end: var(--spacing-3)
+        margin-top: 0
+        margin-bottom: var(--spacing-3)
         &:not(:first-child)
           font-weight: 400
           font-size: var(--font-size-m)
           line-height: 150%
           color: var(--color-neutral-9)
         &:is(:last-child)
-          margin-block-end: 0
+          margin-bottom: 0
   span.validation-message
     margin-top: 0 !important

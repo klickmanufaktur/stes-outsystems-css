@@ -1,0 +1,35 @@
+@use "_fonts" as *
+@use "_variables" as *
+@use "_variables-dark" as *
+
+@use "1_resets/resets" as *
+@use "2_html-elements/html-elements" as *
+@use "3_page-layout/page-layout" as *
+@use "_layout-buerger/layout" as *
+@use "_layout-buerger/main" as *
+@use "_layout-buerger/header" as *
+@use "_layout-buerger/footer" as *
+@use "4_widgets/widgets" as *
+@use "6_patterns/patterns" as *
+
+/**
+ * Bürgerapplikationen
+ */
+.buerger .ThemeGrid_Container
+  max-width: 1280px
+
+/**
+  * Verwaltungsapplikationen
+  */
+.screen-container:has(.verwaltung)
+  overflow-x: auto
+.verwaltung .header .ThemeGrid_Container
+  padding: var(--space-none) var(--space-s)
+.verwaltung .main-content.ThemeGrid_Container
+  padding: var(--space-s)
+.verwaltung .ThemeGrid_Container
+  min-width: 1024px
+.verwaltung .content-top-title
+  margin-bottom: var(--space-s)
+.verwaltung .popup-dialog
+  max-width: calc(100% - var(--space-xl))

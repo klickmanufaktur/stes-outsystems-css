@@ -1,11 +1,13 @@
 body.has-accessible-features
   *
     &:focus-visible
-      outline: var(--spacing-0-5) solid var(--color-focus-outer)
-      outline-offset: var(--spacing-0-5)
-    &:focus
+      outline: 2px solid var(--color-focus-outer)
+      outline-offset: 2px
+    a:focus
       box-shadow: none
       background: inherit
+    &:focus
+      box-shadow: none
 
   /*input, textarea
     &:focus-visible

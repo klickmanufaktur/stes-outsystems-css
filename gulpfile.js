@@ -5,36 +5,46 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
 const rename = require("gulp-rename"); // Zum Umbenennen von Dateien
+const path = require("path"); // Zum Arbeiten mit Dateipfaden
 
 // Pfade
 const paths = {
     styles: {
-        main: "app/styles.sass", // Nur styles.sass wird kompiliert
-        watch: "app/**/*.{sass,scss}",  // Alle SASS-Dateien im app-Ordner und Unterordnern
-        dest: "dist/",
+        src: "app/*.sass", // Alle .sass-Dateien im app-Ordner (keine Unterordner)
+        watch: "app/**/*.{sass,scss}", // Alle SASS/SCSS-Dateien im app-Ordner und Unterordnern
+        dest: "dist/", // Zielordner für CSS-Dateien
     },
 };
 
-// Generiert die unminifizierte styles.css
+// Generiert die unminifizierten CSS-Dateien
 function stylesPlain() {
     return gulp
-        .src(paths.styles.main)
-        .pipe(sass().on("error", sass.logError)) // Nur SASS kompilieren
-        .pipe(rename("styles.css")) // Umbenennen in styles.css
-        .pipe(gulp.dest(paths.styles.dest)); // Ziel: dist/styles.css
+        .src(paths.styles.src)
+        .pipe(sass().on("error", sass.logError)) // Kompiliert SASS
+        .pipe(
+            rename(function (file) {
+                file.extname = ".css"; // Ändert die Dateiendung auf .css
+            })
+        )
+        .pipe(gulp.dest(paths.styles.dest)); // Ziel: dist/
 }
 
-// Generiert die minifizierte styles-min.css mit Autoprefixer und Sourcemap
+// Generiert die minifizierten CSS-Dateien mit Autoprefixer und Sourcemap
 function stylesMinified() {
     return gulp
-        .src(paths.styles.main)
+        .src(paths.styles.src)
         .pipe(sourcemaps.init()) // Startet Sourcemaps
         .pipe(sass().on("error", sass.logError)) // Kompiliert SASS
         .pipe(postcss([autoprefixer()])) // Fügt Autoprefixer hinzu
         .pipe(cleanCSS()) // Minifiziert CSS
-        .pipe(rename("styles-min.css")) // Umbenennen in styles-min.css
-        .pipe(sourcemaps.write(".")) // Schreibt Sourcemap (styles-min.css.map)
-        .pipe(gulp.dest(paths.styles.dest)); // Ziel: dist/styles-min.css
+        .pipe(
+            rename(function (file) {
+                file.basename += "-min"; // Fügt "-min" zum Dateinamen hinzu
+                file.extname = ".css"; // Ändert die Dateiendung auf .css
+            })
+        )
+        .pipe(sourcemaps.write(".")) // Schreibt Sourcemap (z.B. styles-min.css.map)
+        .pipe(gulp.dest(paths.styles.dest)); // Ziel: dist/
 }
 
 // Watch Task für Änderungen

@@ -1,5 +1,5 @@
 .form-control[data-input]
-  border-color: var(--color-border)
+  border-color: var(--color-border) !important
   background: var(--color-background-body)
   padding: var(--spacing-4)
   font-size: var(--font-size-base)
@@ -8,12 +8,15 @@
 
   &:focus, &:active
     box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
+    border-color: var(--color-primary) !important
+    body.has-accessible-features &
+      box-shadow: none
 
   &::placeholder
     color: var(--color-neutral-6)
 
 .form-control[data-textarea]
-  border-color: var(--color-border)
+  border-color: var(--color-border) !important
   background: var(--color-background-body)
   padding: var(--spacing-4)
   font-size: var(--font-size-base)
@@ -21,6 +24,7 @@
 
   &:focus, &:active
     box-shadow: 0px 0px 0px var(--spacing-0-5) rgba(var(--color-primary-rgb), 0.25)
+    border-color: var(--color-primary) !important
 
 // INPUT WITH ICON
 .input-with-icon .input-with-icon-content-icon
